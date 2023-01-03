@@ -1,0 +1,4 @@
+SELECT City, COUNT(CustomerId)
+FROM customer
+GROUP BY City
+ORDER BY 2 DESC;
