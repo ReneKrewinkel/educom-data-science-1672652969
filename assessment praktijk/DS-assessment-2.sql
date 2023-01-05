@@ -1,1 +1,1 @@
-SELECT FirstName, LastName, Birthdate, Adress, City, State FROM Employee
+SELECT FirstName, LastName, Birthdate, Address, City, State FROM Employee;
