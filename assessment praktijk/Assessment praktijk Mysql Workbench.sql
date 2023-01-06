@@ -7,6 +7,12 @@ SELECT * FROM chinook.track WHERE COUNT(AlbumId) =2;
 
 SELECT COUNT(InvoiceID), CustomerId FROM invoice GROUP BY CustomerId;
 
+-- 2
+SELECT FirstName, LastName, Birthdate, Address, City, State FROM Employee;
+
+-- 3
+SELECT * FROM Track LIMIT 20;
+
 -- 4
 SELECT * FROM Track WHERE Milliseconds >= 5000000;
 
