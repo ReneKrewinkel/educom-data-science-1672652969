@@ -22,13 +22,22 @@ DROP FOREIGN KEY FK_mhl_detailsdefs_propertytype_ID;
 ALTER TABLE mhl_districts
 DROP FOREIGN KEY FK_mhl_districts_country_ID;
 
+-- Etc
+
 
 -- CREATE FK ----------------------------------------------------------------
 
 ALTER TABLE mhl_cities
-ADD CONSTRAINT FK_Commune_ID
+ADD CONSTRAINT FK_mhl_cities_Commune_ID
 FOREIGN KEY (commune_ID) REFERENCES mhl_communes(id);
 -- Fails
+
+	ALTER TABLE mhl_cities MODIFY commune_ID INT(11) NULL;
+    
+	UPDATE mhl_cities
+	SET commune_ID=NULL
+	WHERE commune_ID=0;
+	--  Still nope
 
 ALTER TABLE mhl_communes
 ADD CONSTRAINT FK_District_ID
